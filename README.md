@@ -6,7 +6,14 @@ The messages send by `arkclusterchat` will be shown as server messages (yellow),
 ## Compilation
 Binary downloads are not (yet) available, so you will have to compile the program your self. Linux/MacOS is supported, Windows is **not** supported. Simply clone this repository and run `make -s` to compile the program.
 
-    Wildfire:clusterchat s710$ make -s
+    steam@blashyrkh:~/clusterchat$ git clone https://github.com/patrickjane/arkclusterchat.git .
+    Cloning into '.'...
+    remote: Counting objects: 30, done.
+    remote: Compressing objects: 100% (23/23), done.
+    remote: Total 30 (delta 6), reused 23 (delta 6), pack-reused 0
+    Unpacking objects: 100% (30/30), done.
+    Checking connectivity... done.
+    steam@blashyrkh:~/clusterchat$ make -s
     -
     Making arkclusterchat ...
     Compile main ...

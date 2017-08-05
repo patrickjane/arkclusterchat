@@ -9,9 +9,9 @@
 #include "rconthread.hpp"
 #include "channel.hpp"
 #include <stdarg.h>
-
-//#include <string>
+#include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 //***************************************************************************
 // class RConThread

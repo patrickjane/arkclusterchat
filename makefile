@@ -36,7 +36,7 @@ all:
 
 $(DISTBIN):  $(APPL)
 	@echo Linking "$*" ...
-	$(doLink) $(APPL) -o $@
+	$(doLink) $(APPL) -o $@ -lpthread
 
 clean:
 	@(echo Cleanup of app/$(DISTBIN) ... )

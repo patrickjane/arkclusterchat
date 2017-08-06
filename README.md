@@ -25,6 +25,13 @@ Binary downloads are not (yet) available, so you will have to compile the progra
     Linking  ...
 
 You will find a binary named `arkclusterchat` in the same folder.
+
+## Binary downloads
+I have never created binary releases, but it ***should*** work, in case you don't want to download the source and compile the tool:
+
+- http://filehorst.de/d/bkkzJowI (Linux 64bit binary, libstdc++.6)
+- http://filehorst.de/d/bAzgzhDG (MacOS)
+
 ## Usage
 `arkclusterchat` needs RCON support on your server, but it does not need to run on the server itself. Actually, it can run just anywhere as long as you have network access to your server's RCON port.
 The program needs the connection parameters for each host you want to connect to, which can be either given via the `-s` command line options, or stored in a separate configuration file, which is used using the `-c` command line option.

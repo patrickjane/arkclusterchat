@@ -204,6 +204,9 @@ int RConThread::read()
                if (Globals::cfgDebug && *it != this)
                   continue;
 
+               if (!Globals::cfgShowAdmin && !strncmp(p2, "AdminCmd", 8))
+                  continue;
+
                Work* w= new Work;
                w->server.assign(map);
                w->message.assign(p2);

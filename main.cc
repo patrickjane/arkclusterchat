@@ -22,6 +22,8 @@
 // globals
 //***************************************************************************
 
+#define VERSION "1.1"
+
 CondVar mainCond;
 Mutex mainMutex;
 int shouldExit = no;
@@ -36,6 +38,7 @@ int iniHandler(void* user, const char* section, const char* name, const char* va
 
 int Globals::cfgVerbose= 0;
 int Globals::cfgDebug= 0;
+int Globals::cfgShowAdmin= 0;
 
 //***************************************************************************
 // signal processing
@@ -89,7 +92,7 @@ int main(int argc, char* argv[])
    for (std::list<ServerConfig*>::iterator it= configs.begin(); it != configs.end(); ++it)
       printf("Main:  - %s@%s:%d\n", (*it)->title.c_str(), (*it)->host.c_str(), (*it)->port);
 
-   printf("Main: Starting (debug: %d, verbose: %d).\n", Globals::cfgDebug, Globals::cfgVerbose);
+   printf("Main: Starting (show admin cmd: %d, debug: %d, verbose: %d).\n", Globals::cfgShowAdmin, Globals::cfgDebug, Globals::cfgVerbose);
 
    mainMutex.lock();
 
@@ -173,7 +176,7 @@ int doHelp()
 
 void doCopyright()
 {
-   printf("ClusterChat - Ark cross server chat application\n");
+   printf("ClusterChat - Ark cross server chat application version %s\n", VERSION);
    printf("Copyright (c) 2017 by s710\n");
    printf("GitHub: https://github.com/patrickjane/arkclusterchat\n");
 }
@@ -219,6 +222,12 @@ int doCommandline(int argc, char* argv[], std::list<ServerConfig*>* configs)
       if (!strcmp(argv[i], "--debug"))
       {
          Globals::cfgDebug= 1;
+         continue;
+      }
+
+      if (!strcmp(argv[i], "--show-admin-cmd"))
+      {
+         Globals::cfgShowAdmin= 1;
          continue;
       }
    }

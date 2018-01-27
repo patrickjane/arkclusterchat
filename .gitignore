@@ -1,3 +1,5 @@
 arkclusterchat
+arkclusterchat.linux
+arkclusterchat.macos
 *.ini
 obj

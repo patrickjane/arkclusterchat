@@ -48,6 +48,7 @@ class Globals
 
       static int cfgVerbose;
       static int cfgDebug;
+      static int cfgShowAdmin;
 };
 
 
